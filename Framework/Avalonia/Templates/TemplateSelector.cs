@@ -2,8 +2,8 @@
 using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Templates;
 using Avalonia.Markup.Xaml.Templates;
-using FluentAvalonia.UI.Controls;
 using TheXamlGuy.Framework.Core;
+using TheXamlGuy.UI.Avalonia.Controls;
 
 namespace TheXamlGuy.Framework.Avalonia;
 

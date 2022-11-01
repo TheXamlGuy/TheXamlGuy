@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Markup.Xaml;
+using FluentAvalonia.Styling;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PropertyChanged;

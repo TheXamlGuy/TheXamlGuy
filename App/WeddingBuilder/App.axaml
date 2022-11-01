@@ -1,10 +1,9 @@
 <Application
     x:Class="Builder.App"
     xmlns="https://github.com/avaloniaui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:style="using:FluentAvalonia.Styling">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Styles>
-        <style:FluentAvaloniaTheme />
+		<XamlControlsResources />
         <Style Selector="Button.Icon">
             <Setter Property="FontSize" Value="16" />
             <Setter Property="FontFamily" Value="{StaticResource SymbolThemeFontFamily}" />
