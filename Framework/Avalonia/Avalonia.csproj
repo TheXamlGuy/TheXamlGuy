@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TheXamlGuy.Framework.Avalonia</RootNamespace>
+    <AssemblyName>TheXamlGuy.Framework.Avalonia</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.0-preview3" />
+    <PackageReference Include="MicroCom.Runtime" Version="0.10.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\UI\Avalonia\Avalonia.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FluentAvalonia">
+      <HintPath>References\FluentAvalonia.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+﻿<Window
+    x:Class="WeddingBooth.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Content="{Route {Binding Route},
+                    Root}"
+    Loaded="{Navigate {Binding EventAggregator},
+                      Root,
+                      Navigation}"
+    WindowStyle="None" />

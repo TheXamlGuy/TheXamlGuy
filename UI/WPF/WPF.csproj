@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>TheXamlGuy.UI.WPF</RootNamespace>
+		<AssemblyName>TheXamlGuy.UI.WPF</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Resources\Effects\BrightnessEffect.fx" />
+		<None Remove="Resources\Effects\BrightnessEffect.ps" />
+		<None Remove="Resources\Effects\ColorComplementEffect.fx" />
+		<None Remove="Resources\Effects\ColorComplementEffect.ps" />
+		<None Remove="Resources\Effects\ColorMatrixEffect.fx" />
+		<None Remove="Resources\Effects\ColorMatrixEffect.ps" />
+		<None Remove="Resources\Effects\ContrastEffect.fx" />
+		<None Remove="Resources\Effects\ContrastEffect.ps" />
+		<None Remove="Resources\Effects\GrayScaleEffect.fx" />
+		<None Remove="Resources\Effects\GrayScaleEffect.ps" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\UI\UI.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Resource Include="Resources\Effects\BrightnessEffect.fx" />
+		<Resource Include="Resources\Effects\BrightnessEffect.ps" />
+		<Resource Include="Resources\Effects\ColorComplementEffect.fx" />
+		<Resource Include="Resources\Effects\ColorComplementEffect.ps" />
+		<Resource Include="Resources\Effects\ColorMatrixEffect.fx" />
+		<Resource Include="Resources\Effects\ColorMatrixEffect.ps" />
+		<Resource Include="Resources\Effects\ContrastEffect.fx" />
+		<Resource Include="Resources\Effects\ContrastEffect.ps" />
+		<Resource Include="Resources\Effects\GrayScaleEffect.fx" />
+		<Resource Include="Resources\Effects\GrayScaleEffect.ps" />
+	</ItemGroup>
+</Project>

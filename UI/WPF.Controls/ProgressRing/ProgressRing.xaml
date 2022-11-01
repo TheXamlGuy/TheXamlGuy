@@ -1,0 +1,89 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:TheXamlGuy.UI.WPF.Controls"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <SolidColorBrush x:Key="ProgressRingForeground" Color="White" />
+    <SolidColorBrush x:Key="ProgressRingBackground" Color="Transparent" />
+    <system:Double x:Key="ProgressRingStrokeThickness">4</system:Double>
+    <Style TargetType="controls:ProgressRing">
+        <Setter Property="Foreground" Value="{StaticResource ProgressRingForeground}" />
+        <Setter Property="Background" Value="{StaticResource ProgressRingBackground}" />
+        <Setter Property="Thickness" Value="{StaticResource ProgressRingStrokeThickness}" />
+        <Setter Property="IsHitTestVisible" Value="False" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="MinHeight" Value="16" />
+        <Setter Property="MinWidth" Value="16" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:ProgressRing">
+                    <Grid x:Name="LayoutRoot">
+                        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                            <controls:Arc
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+                                EndAngle="359"
+                                StartAngle="0"
+                                Stroke="{TemplateBinding Background}"
+                                StrokeThickness="{TemplateBinding Thickness}" />
+                            <controls:Arc
+                                x:Name="ForegroundArc"
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+                                EndAngle="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.EndAngle}"
+                                RenderTransformOrigin="0.5,0.5"
+                                StartAngle="0"
+                                Stroke="{TemplateBinding Foreground}"
+                                StrokeEndLineCap="Round"
+                                StrokeStartLineCap="Round"
+                                StrokeThickness="{TemplateBinding Thickness}">
+                                <controls:Arc.RenderTransform>
+                                    <TransformGroup>
+                                        <RotateTransform x:Name="RotateTransform" />
+                                    </TransformGroup>
+                                </controls:Arc.RenderTransform>
+                            </controls:Arc>
+                        </Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Inactive">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="ForegroundArc"
+                                            Storyboard.TargetProperty="Opacity"
+                                            To="0"
+                                            Duration="0" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="IndeterminateActive">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames
+                                            RepeatBehavior="Forever"
+                                            Storyboard.TargetName="ForegroundArc"
+                                            Storyboard.TargetProperty="EndAngle">
+                                            <SplineDoubleKeyFrame KeyTime="0" Value="0" />
+                                            <SplineDoubleKeyFrame KeyTime="0:0:1" Value="179" />
+                                            <SplineDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <DoubleAnimation
+                                            RepeatBehavior="Forever"
+                                            Storyboard.TargetName="RotateTransform"
+                                            Storyboard.TargetProperty="Angle"
+                                            From="00"
+                                            To="359"
+                                            Duration="0:0:0.65" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Active" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

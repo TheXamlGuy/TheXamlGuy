@@ -1,0 +1,9 @@
+<Window
+    x:Class="Builder.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Content="{Route {Binding Route},
+                           Window}"
+    Loaded="{Navigate {Binding EventAggregator},
+                             Main,
+                             Route=Window}" />

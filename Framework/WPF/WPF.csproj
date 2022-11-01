@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>TheXamlGuy.Framework.WPF</RootNamespace>
+		<AssemblyName>TheXamlGuy.Framework.WPF</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0-rc.2.22472.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\UI\WPF\WPF.csproj" />
+		<ProjectReference Include="..\Core\Core.csproj" />
+		<ProjectReference Include="..\Microcontroller\Microcontroller.csproj" />
+	</ItemGroup>
+</Project>

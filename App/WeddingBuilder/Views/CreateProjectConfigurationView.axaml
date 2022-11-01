@@ -1,0 +1,24 @@
+<UserControl
+    x:Class="Builder.CreateProjectConfigurationView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:TheXamlGuy.UI.Avalonia.Controls;assembly=TheXamlGuy.UI.Avalonia.Controls"
+    xmlns:fluent="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+    xmlns:views="using:Builder"
+    Loaded="{Composite {ChangeProperty {Binding $parent[fluent:ContentDialog]},
+                                             Classes,
+                                             Create}}">
+    <Grid>
+        <controls:FilePicker x:Name="FilePicker" />
+        <StackPanel Spacing="18">
+            <TextBox Watermark="Project name" />
+            <Grid ColumnDefinitions="*, 4, Auto">
+                <TextBox Grid.Column="0" Watermark="Project location" />
+                <Button
+                    Grid.Column="2"
+                    Click="{Invoke {Binding #FilePicker.Open}}"
+                    Content="..." />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

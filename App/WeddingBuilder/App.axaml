@@ -1,0 +1,75 @@
+<Application
+    x:Class="Builder.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:style="using:FluentAvalonia.Styling">
+    <Application.Styles>
+        <style:FluentAvaloniaTheme />
+        <Style Selector="Button.Icon">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="{StaticResource SymbolThemeFontFamily}" />
+            <Setter Property="MinHeight" Value="{StaticResource PaneToggleButtonHeight}" />
+            <Setter Property="MinWidth" Value="{StaticResource PaneToggleButtonWidth}" />
+            <Setter Property="Padding" Value="4,2" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="{DynamicResource NavigationViewItemBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource NavigationViewItemForeground}" />
+            <Setter Property="BorderThickness" Value="{DynamicResource NavigationViewToggleBorderThickness}" />
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border
+                        Name="LayoutRoot"
+                        Height="{TemplateBinding MinHeight}"
+                        Margin="{TemplateBinding Padding}"
+                        HorizontalAlignment="Stretch"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="{DynamicResource ControlCornerRadius}">
+                        <Grid Name="ContentRoot" ColumnDefinitions="Auto,*">
+                            <Border Width="{TemplateBinding MinWidth}">
+                                <Viewbox
+                                    Name="IconHost"
+                                    Width="16"
+                                    Height="16"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                    <ContentPresenter
+                                        Name="ContentPresenter"
+                                        VerticalContentAlignment="Center"
+                                        Content="{TemplateBinding Content}"
+                                        FontSize="{TemplateBinding FontSize}" />
+                                </Viewbox>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+            <Style Selector="^:pointerover">
+                <Style Selector="^ /template/ Border#LayoutRoot">
+                    <Setter Property="Background" Value="{DynamicResource NavigationViewButtonBackgroundPointerOver}" />
+                </Style>
+                <Style Selector="^ /template/ ContentPresenter#ContentPresenter">
+                    <Setter Property="Foreground" Value="{DynamicResource NavigationViewButtonForegroundPointerOver}" />
+                </Style>
+            </Style>
+            <Style Selector="^:pressed">
+                <Style Selector="^ /template/ Border#LayoutRoot">
+                    <Setter Property="Background" Value="{DynamicResource NavigationViewButtonBackgroundPressed}" />
+                </Style>
+                <Style Selector="^ /template/ ContentPresenter#ContentPresenter">
+                    <Setter Property="Foreground" Value="{DynamicResource NavigationViewButtonForegroundPressed}" />
+                </Style>
+            </Style>
+            <Style Selector="^:disabled">
+                <Style Selector="^ /template/ Border#LayoutRoot">
+                    <Setter Property="Background" Value="{DynamicResource NavigationViewButtonBackgroundDisabled}" />
+                </Style>
+                <Style Selector="^ /template/ ContentPresenter#ContentPresenter">
+                    <Setter Property="Foreground" Value="{DynamicResource NavigationViewButtonForegroundDisabled}" />
+                </Style>
+            </Style>
+        </Style>
+    </Application.Styles>
+</Application>

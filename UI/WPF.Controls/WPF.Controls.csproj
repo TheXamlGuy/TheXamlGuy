@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>TheXamlGuy.UI.WPF.Controls</RootNamespace>
+		<AssemblyName>TheXamlGuy.UI.WPF.Controls</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Media\Capture\Capture.csproj" />
+		<ProjectReference Include="..\WPF\WPF.csproj" />
+	</ItemGroup>
+</Project>

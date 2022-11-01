@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/TheXamlGuy.UI.WPF.Controls;component/CameraPreview/CameraPreview.xaml" />
+        <ResourceDictionary Source="/TheXamlGuy.UI.WPF.Controls;component/Countdown/Countdown.xaml" />
+        <ResourceDictionary Source="/TheXamlGuy.UI.WPF.Controls;component/FlipView/FlipView.xaml" />
+        <ResourceDictionary Source="/TheXamlGuy.UI.WPF.Controls;component/TransitioningContentControl/TransitioningContentControl.xaml" />
+        <ResourceDictionary Source="/TheXamlGuy.UI.WPF.Controls;component/ProgressRing/ProgressRing.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

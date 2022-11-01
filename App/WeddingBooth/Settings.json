@@ -1,0 +1,140 @@
+{
+    "Startup": {
+        "Display": "DISPLAY2",
+        "FullScreen":  true
+    },
+    "Navigation": [
+        "Welcome",
+        "Camera"
+    ],
+    "Microcontroller": {
+        "PortName": "COM7",
+        "BaudRate": 9600
+    },
+    "RemoteCamera": {
+        "Name": "Test"
+    },
+    "SeatingChart": [
+        {
+            "Name": "one",
+            "Guests": [
+                "Lynne Lamb",
+                "Peter Lamb",
+                "Liam Lamb",
+                "Ryan Lamb",
+                "Mabel Lamb",
+                "Hayley Lamb",
+                "Nikki Rushton",
+                "John Clark",
+                "Rebecca Days"
+            ]
+        },
+        {
+            "Name": "two",
+            "Guests": [
+                "Pauline Clough",
+                "John Clough",
+                "Ava Lamb-Clark",
+                "Nathan Clark",
+                "Emma Cunnington",
+                "George Clough",
+                "Vera Clough",
+                "Margaret Clayton"
+            ]
+        },
+        {
+            "Name": "three",
+            "Guests": [
+                "Alex Clark",
+                "Anita Chan",
+                "Trevor Million",
+                "Lisa Iveson",
+                "Brian Clark",
+                "Brian Clark",
+                "Emma Lee",
+                "Lisa Clark",
+                "Siân Laura Davies"
+            ]
+        },
+        {
+            "Name": "four",
+            "Guests": [
+                "Michael Lamb",
+                "Lesley Lamb",
+                "Ken Clough",
+                "Kathryn Dodds",
+                "Patricia Clough",
+                "Ann Peck",
+                "Greg Peck"
+            ]
+        },
+        {
+            "Name": "five",
+            "Guests": [
+                "Olive Shorten",
+                "Lynne Shorten",
+                "Joyce Clark",
+                "Alison Clarke",
+                "Jim Clarke",
+                "Scott Thirlaway",
+                "Kevin McVittie",
+                "Katharyn Church",
+                "Eve Clark",
+                "Grace Clark"
+            ]
+        },
+        {
+            "Name": "six",
+            "Guests": [
+                "Tom Parker",
+                "Amy Parker",
+                "Stephen Coates",
+                "Ashley Coates",
+                "Callie Coates",
+                "Ellie Coates",
+                "Colin Armstrong",
+                "Kelly Shearsmith",
+                "Jay Evans"
+            ]
+        },
+        {
+            "Name": "seven",
+            "Guests": [
+                "Kelly Taylor",
+                "Phillip Taylor",
+                "Lucas Taylor",
+                "Lana Taylor",
+                "Christopher Lamb",
+                "Emma Hunter",
+                "Tommy",
+                "Livinya"
+            ]
+        },
+        {
+            "Name": "eight",
+            "Guests": [
+                "Harry Clough",
+                "Jack Clough",
+                "Corey Derbyshire",
+                "Shauna Gallon",
+                "Lora Johnstone",
+                "Steven Clark",
+                "Michael Clarke",
+                "Nicole Wright"
+            ]
+        },
+        {
+            "Name": "nine",
+            "Guests": [
+                "Vikki Finnigan",
+                "Logan Finnigan",
+                "Gemma Carr",
+                "Alysha Carr",
+                "Ross Finnigan",
+                "Jemma Clark",
+                "Lily-Rose Goddard",
+                "David Ford"
+            ]
+        }
+    ]
+}

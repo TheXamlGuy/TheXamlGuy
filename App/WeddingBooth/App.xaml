@@ -1,0 +1,84 @@
+﻿<Application
+    x:Class="TheXamlGuy.App.WeddingDisplay.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <Application.Resources>
+
+        <FontFamily x:Key="ContentControlFontFamily">Segoe UI Variable Display</FontFamily>
+        <FontFamily x:Key="AccentFontFamily">Signature Collection</FontFamily>
+        <FontFamily x:Key="SemiLightContentControlFontFamily">Segoe UI Variable Display Semil</FontFamily>
+
+        <system:Double x:Key="CaptionTextBlockFontSize">12</system:Double>
+        <system:Double x:Key="BodyTextBlockFontSize">14</system:Double>
+        <system:Double x:Key="SubtitleTextBlockFontSize">20</system:Double>
+        <system:Double x:Key="TitleTextBlockFontSize">28</system:Double>
+        <system:Double x:Key="TitleLargeTextBlockFontSize">40</system:Double>
+        <system:Double x:Key="DisplayTextBlockFontSize">68</system:Double>
+        <system:Double x:Key="LargeDisplayTextBlockFontSize">120</system:Double>
+
+        <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource ContentControlFontFamily}" />
+            <Setter Property="FontSize" Value="{StaticResource BodyTextBlockFontSize}" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="LineStackingStrategy" Value="MaxHeight" />
+        </Style>
+
+        <Style
+            x:Key="CaptionTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource CaptionTextBlockFontSize}" />
+            <Setter Property="FontWeight" Value="Normal" />
+        </Style>
+
+        <Style
+            x:Key="BodyTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Normal" />
+        </Style>
+
+        <Style
+            x:Key="BodyStrongTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock" />
+
+        <Style
+            x:Key="SubtitleTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource SubtitleTextBlockFontSize}" />
+        </Style>
+
+        <Style
+            x:Key="TitleTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource TitleTextBlockFontSize}" />
+        </Style>
+
+        <Style
+            x:Key="TitleLargeTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource TitleLargeTextBlockFontSize}" />
+        </Style>
+
+        <Style
+            x:Key="DisplayTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource DisplayTextBlockFontSize}" />
+        </Style>
+
+        <Style
+            x:Key="LargeDisplayTextBlockStyle"
+            BasedOn="{StaticResource BaseTextBlockStyle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="{StaticResource LargeDisplayTextBlockFontSize}" />
+        </Style>
+    </Application.Resources>
+</Application>

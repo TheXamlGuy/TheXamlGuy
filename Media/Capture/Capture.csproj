@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Rssdp" Version="4.0.4" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0-rc.2.22472.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\UI\UI\UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\..\Downloads\AForge.NET-master (1)\AForge.NET-master\Sources\Video.DirectShow\bin\Release\net5.0-windows\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Video">
+      <HintPath>..\..\..\..\..\Downloads\AForge.NET-master (1)\AForge.NET-master\Sources\Video.DirectShow\bin\Release\net5.0-windows\Video.dll</HintPath>
+    </Reference>
+    <Reference Include="Video.DirectShow">
+      <HintPath>..\..\..\..\..\Downloads\AForge.NET-master (1)\AForge.NET-master\Sources\Video.DirectShow\bin\Release\net5.0-windows\Video.DirectShow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

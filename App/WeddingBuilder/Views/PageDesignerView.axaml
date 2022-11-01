@@ -1,0 +1,9 @@
+<UserControl
+    x:Class="Builder.PageDesignerView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SplitView
+        IsPaneOpen="True"
+        PaneBackground="Red"
+        PanePlacement="Right" />
+</UserControl>
