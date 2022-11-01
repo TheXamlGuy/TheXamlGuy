@@ -14,14 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\UI\Avalonia.Controls\Avalonia.Controls.csproj" />
     <ProjectReference Include="..\..\UI\Avalonia\Avalonia.csproj" />
     <ProjectReference Include="..\Core\Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="FluentAvalonia">
-      <HintPath>References\FluentAvalonia.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

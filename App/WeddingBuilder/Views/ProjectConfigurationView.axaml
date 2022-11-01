@@ -1,25 +1,24 @@
-<fluent:ContentDialog
+<ContentDialog
     x:Class="Builder.ProjectConfigurationView"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:fluent="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
     CloseButtonText="Cancel">
-    <fluent:ContentDialog.Title>
+    <ContentDialog.Title>
         <Grid Height="40" ColumnDefinitions="Auto, *">
             <Button
                 x:Name="BackButton"
                 Grid.Column="0"
                 Classes="Icon"
                 Click="{Invoke {Binding #Frame.GoBack}}">
-                <fluent:FAPathIcon Data="F1 M 12.28 17.599998 C 12.119999 17.733334 11.939999 17.799999 11.74 17.799999 C 11.539999 17.799999 11.36 17.719999 11.2 17.559999 L 6.2 12.32 C 6.066667 12.186666 6 12.02 6 11.82 C 6 11.62 6.066667 11.440001 6.2 11.28 L 11.2 6.04 C 11.413333 5.826667 11.66 5.753334 11.94 5.82 C 12.219999 5.886666 12.399999 6.059999 12.48 6.339999 C 12.559999 6.62 12.493332 6.866667 12.28 7.08 L 7.8 11.799999 L 12.28 16.52 C 12.439999 16.68 12.513332 16.860001 12.5 17.059999 C 12.486666 17.259998 12.413332 17.439999 12.28 17.599998 Z " />
+                <PathIconEx Data="F1 M 12.28 17.599998 C 12.119999 17.733334 11.939999 17.799999 11.74 17.799999 C 11.539999 17.799999 11.36 17.719999 11.2 17.559999 L 6.2 12.32 C 6.066667 12.186666 6 12.02 6 11.82 C 6 11.62 6.066667 11.440001 6.2 11.28 L 11.2 6.04 C 11.413333 5.826667 11.66 5.753334 11.94 5.82 C 12.219999 5.886666 12.399999 6.059999 12.48 6.339999 C 12.559999 6.62 12.493332 6.866667 12.28 7.08 L 7.8 11.799999 L 12.28 16.52 C 12.439999 16.68 12.513332 16.860001 12.5 17.059999 C 12.486666 17.259998 12.413332 17.439999 12.28 17.599998 Z " />
             </Button>
             <TextBlock
                 x:Name="Title"
                 Grid.Column="1"
                 VerticalAlignment="Center" />
         </Grid>
-    </fluent:ContentDialog.Title>
-    <fluent:Frame
+    </ContentDialog.Title>
+    <Frame
         x:Name="Frame"
         Width="500"
         Height="350"
@@ -28,43 +27,43 @@
         Loaded="{Navigate {Binding EventAggregator},
                                  StartProjectConfiguration,
                                  Route=ProjectConfiguration}" />
-    <fluent:ContentDialog.Styles>
-        <Style Selector="fluent|ContentDialog.Project">
-            <Style Selector="^fluent|ContentDialog.Project /template/ Button#PrimaryButton">
+    <ContentDialog.Styles>
+        <Style Selector="ContentDialog.Project">
+            <Style Selector="^ContentDialog.Project /template/ Button#PrimaryButton">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Project Button#BackButton">
+            <Style Selector="^ContentDialog.Project Button#BackButton">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Project TextBlock#Title">
+            <Style Selector="^ContentDialog.Project TextBlock#Title">
                 <Setter Property="Text" Value="Let's get started" />
             </Style>
         </Style>
-        <Style Selector="fluent|ContentDialog.Create">
-            <Style Selector="^fluent|ContentDialog.Create /template/ Button#PrimaryButton">
+        <Style Selector="ContentDialog.Create">
+            <Style Selector="^ContentDialog.Create /template/ Button#PrimaryButton">
                 <Setter Property="Content" Value="Create" />
                 <Setter Property="IsVisible" Value="True" />
                 <Setter Property="Grid.Column" Value="0" />
                 <Setter Property="Grid.ColumnSpan" Value="2" />
                 <Setter Property="Margin" Value="0 0 4 0" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Create Button#BackButton">
+            <Style Selector="^ContentDialog.Create Button#BackButton">
                 <Setter Property="IsVisible" Value="True" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Create TextBlock#Title">
+            <Style Selector="^ContentDialog.Create TextBlock#Title">
                 <Setter Property="Text" Value="Create a new project" />
             </Style>
         </Style>
-        <Style Selector="fluent|ContentDialog.Open">
-            <Style Selector="^fluent|ContentDialog.Open /template/ Button#PrimaryButton">
+        <Style Selector="ContentDialog.Open">
+            <Style Selector="^ContentDialog.Open /template/ Button#PrimaryButton">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Open Button#BackButton">
+            <Style Selector="^ContentDialog.Open Button#BackButton">
                 <Setter Property="IsVisible" Value="True" />
             </Style>
-            <Style Selector="^fluent|ContentDialog.Open TextBlock#Title">
+            <Style Selector="^ContentDialog.Open TextBlock#Title">
                 <Setter Property="Text" Value="Open a project" />
             </Style>
         </Style>
-    </fluent:ContentDialog.Styles>
-</fluent:ContentDialog>
+    </ContentDialog.Styles>
+</ContentDialog>

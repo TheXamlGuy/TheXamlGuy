@@ -2,7 +2,6 @@
     x:Class="Builder.ExistingProjectConfigurationView"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:fluent="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
-    Loaded="{Composite {ChangeProperty {Binding $parent[fluent:ContentDialog]},
+    Loaded="{Composite {ChangeProperty {Binding $parent[ContentDialog]},
                                              Classes,
                                              Open}}" />

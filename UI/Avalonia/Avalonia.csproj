@@ -12,9 +12,4 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\UI\UI.csproj" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="FluentAvalonia">
-	    <HintPath>References\FluentAvalonia.dll</HintPath>
-	  </Reference>
-	</ItemGroup>
 </Project>

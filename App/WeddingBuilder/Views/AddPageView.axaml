@@ -1,16 +1,14 @@
-<fluent:ContentDialog
+<ContentDialog
     x:Class="Builder.AddPageView"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:fluent="using:FluentAvalonia.UI.Controls"
-    xmlns:ui="clr-namespace:TheXamlGuy.UI.Avalonia;assembly=TheXamlGuy.UI.Avalonia"
     Title="Add Page"
     CloseButtonText="Cancel"
     DefaultButton="Primary"
-    PrimaryButtonClick="{ui:Invoke Add}"
+    PrimaryButtonClick="{Invoke Add}"
     PrimaryButtonText="Add">
     <TextBox
         Width="500"
         Text="{Binding Name}"
         Watermark="Enter page name" />
-</fluent:ContentDialog>
+</ContentDialog>

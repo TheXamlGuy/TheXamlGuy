@@ -1,7 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
-using FluentAvalonia.UI.Controls;
 using TheXamlGuy.Framework.Core;
+using TheXamlGuy.UI.Avalonia.Controls;
 
 namespace TheXamlGuy.Framework.Avalonia;
 

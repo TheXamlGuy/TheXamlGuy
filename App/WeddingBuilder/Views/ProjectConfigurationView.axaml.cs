@@ -1,7 +1,7 @@
 using Avalonia.Styling;
-using FluentAvalonia.UI.Controls;
 using PropertyChanged;
 using System;
+using TheXamlGuy.UI.Avalonia.Controls;
 
 namespace Builder;
 
@@ -13,5 +13,5 @@ public partial class ProjectConfigurationView : ContentDialog, IStyleable
         InitializeComponent();
     }
 
-    Type IStyleable.StyleKey => typeof(ContentDialog);
+    Type IStyleable.StyleKey => typeof(FluentAvalonia.UI.Controls.ContentDialog);
 }
