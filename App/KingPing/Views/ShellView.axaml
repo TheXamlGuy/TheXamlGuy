@@ -1,0 +1,15 @@
+<NavigationView
+    x:Class="KingPing.ShellView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Name="NavigationView"
+    PaneDisplayMode="Top"
+    SelectionChanged="{Navigate {Binding EventAggregator} {Binding #NavigationView.SelectedItem.Tag}, Route=Frame}">
+    <NavigationView.MenuItems>
+        <NavigationViewItem Content="Digital Outputs" Tag="DigitalOutputs" />
+        <NavigationViewItem Content="Digital Inputs" Tag="DigitalInputs" />
+        <NavigationViewItem Content="Analog Outputs" Tag="AnalogOutputs" />
+        <NavigationViewItem Content="Favourites" Tag="Favourites" />
+    </NavigationView.MenuItems>
+    <Frame Content="{Route {Binding Route}, Frame}" />
+</NavigationView>

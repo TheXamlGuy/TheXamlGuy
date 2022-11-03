@@ -1,0 +1,66 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:TheXamlGuy.UI.Avalonia.Controls;assembly=TheXamlGuy.UI.Avalonia.Controls">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <ProgressRing />
+        </Border>
+    </Design.PreviewWith>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+            <StaticResource x:Key="ProgressRingForeground" ResourceKey="AccentFillColorDefaultBrush" />
+            <StaticResource x:Key="ProgressRingBackground" ResourceKey="SubtleFillColorSecondaryBrush" />
+        </ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    <x:Double x:Key="ProgressRingStrokeThickness">4</x:Double>
+    <ControlTheme x:Key="{x:Type controls:ProgressRing}" TargetType="controls:ProgressRing">
+        <Setter Property="MinWidth" Value="16" />
+        <Setter Property="MinHeight" Value="16" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Width" Value="32" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Arc
+                        StartAngle="0"
+                        Stroke="{DynamicResource ProgressRingBackground}"
+                        StrokeThickness="{DynamicResource ProgressRingStrokeThickness}"
+                        SweepAngle="360" />
+                    <Arc
+                        x:Name="Arc"
+                        StartAngle="0"
+                        Stroke="{DynamicResource ProgressRingForeground}"
+                        StrokeLineCap="Round"
+                        StrokeThickness="{DynamicResource ProgressRingStrokeThickness}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:indeterminate">
+            <Style Selector="^ /template/ Arc#Arc">
+                <Setter Property="StartAngle" Value="0" />
+                <Setter Property="SweepAngle" Value="90" />
+                <Style.Animations>
+                    <Animation
+                        Easing="SplineEasing"
+                        FillMode="Both"
+                        IterationCount="Infinite"
+                        Duration="0:0:.75">
+                        <KeyFrame Cue="0%">
+                            <Setter Property="StartAngle" Value="0" />
+                            <Setter Property="SweepAngle" Value="180" />
+                        </KeyFrame>
+                        <KeyFrame Cue="50%">
+                            <Setter Property="StartAngle" Value="270" />
+                            <Setter Property="SweepAngle" Value="22.5" />
+                        </KeyFrame>
+                        <KeyFrame Cue="100%">
+                            <Setter Property="StartAngle" Value="360" />
+                            <Setter Property="SweepAngle" Value="180" />
+                        </KeyFrame>
+                    </Animation>
+                </Style.Animations>
+            </Style>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

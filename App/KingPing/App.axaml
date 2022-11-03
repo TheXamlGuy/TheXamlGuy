@@ -1,0 +1,9 @@
+<Application
+    x:Class="KingPing.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Styles>
+        <XamlControlsResources />
+        <StyleInclude Source="avares://TheXamlGuy.UI.Avalonia/Themes/ControlResources.axaml" />
+    </Application.Styles>
+</Application>

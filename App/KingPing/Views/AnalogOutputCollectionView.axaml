@@ -1,0 +1,17 @@
+<UserControl
+    x:Class="KingPing.AnalogOutputCollectionView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer Padding="12">
+        <ItemsRepeater ItemTemplate="{Binding TemplateSelector}" Items="{Binding}">
+            <ItemsRepeater.Layout>
+                <UniformGridLayout
+                    ItemsStretch="Uniform"
+                    MinColumnSpacing="12"
+                    MinItemWidth="200"
+                    MinRowSpacing="12"
+                    Orientation="Horizontal" />
+            </ItemsRepeater.Layout>
+        </ItemsRepeater>
+    </ScrollViewer>
+</UserControl>

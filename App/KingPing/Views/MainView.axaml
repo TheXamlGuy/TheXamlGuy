@@ -1,0 +1,9 @@
+<UserControl
+    x:Class="KingPing.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Content="{Route {Binding Route},
+                    Main}"
+    Loaded="{Navigate {Binding EventAggregator},
+                      Shell,
+                      Route=Main}" />

@@ -7,41 +7,37 @@ using TheXamlGuy.UI.Avalonia.Controls;
 
 namespace TheXamlGuy.Framework.Avalonia;
 
-public class TemplateSelector : DataTemplateSelector, ITemplateSelector
+public class TemplateSelector : IDataTemplate, ITemplateSelector
 {
-    private readonly Dictionary<object, DataTemplate> dataTracking = new();
+    private readonly Dictionary<object, IControl> dataTracking = new();
 
-    private readonly ITemplateFactory templateFactory;
     private readonly IEventAggregator eventAggregator;
+    private readonly ITemplateFactory templateFactory;
 
-    public TemplateSelector(ITemplateFactory templateFactory, 
+    public TemplateSelector(ITemplateFactory templateFactory,
         IEventAggregator eventAggregator)
     {
         this.templateFactory = templateFactory;
         this.eventAggregator = eventAggregator;
     }
 
-    protected override IDataTemplate SelectTemplateCore(object item, IControl container)
+    public IControl? Build(object? item)
     {
         if (item is not null)
         {
-            if (dataTracking.TryGetValue(item, out DataTemplate? cachedDataTemplate))
+            if (dataTracking.TryGetValue(item, out IControl? control))
             {
-                return cachedDataTemplate;
+                return control;
             }
 
-            return new FuncDataTemplate(item.GetType(), (value, namescope) =>
-            {
-                if (templateFactory.Create(item) is TemplatedControl template)
-                {
-                    return template;
-                }
-
-                return null;
-            });
-                        
+            return (IControl?)templateFactory.Create(item);
         }
 
-        return base.SelectTemplateCore(item, container);
+        return null;
+    }
+
+    public bool Match(object? data)
+    {
+        return true;
     }
 }
