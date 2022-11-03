@@ -29,10 +29,11 @@
                         SweepAngle="360" />
                     <Arc
                         x:Name="Arc"
-                        StartAngle="0"
+                        StartAngle="270"
                         Stroke="{DynamicResource ProgressRingForeground}"
                         StrokeLineCap="Round"
-                        StrokeThickness="{DynamicResource ProgressRingStrokeThickness}" />
+                        StrokeThickness="{DynamicResource ProgressRingStrokeThickness}"
+                        SweepAngle="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TemplateSettings.SweepAngle}" />
                 </Grid>
             </ControlTemplate>
         </Setter>

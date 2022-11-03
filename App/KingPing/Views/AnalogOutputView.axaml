@@ -2,8 +2,7 @@
     x:Class="KingPing.AnalogOutputView"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<SettingsExpander.Footer>
-		<ProgressRing />
-
-	</SettingsExpander.Footer>
+    <SettingsExpander.Footer>
+        <ProgressRing IsIndeterminate="True" />
+    </SettingsExpander.Footer>
 </SettingsExpander>
